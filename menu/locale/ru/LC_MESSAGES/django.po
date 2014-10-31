@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-13 02:21+0400\n"
+"POT-Creation-Date: 2014-10-31 13:18+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,9 @@ msgstr "Для авторизированных"
 
 #: models.py:76
 msgid "Should this item only be shown to authenticated users?"
-msgstr "Если установить, то пункт меню будет показан только для авторизированных пользователей"
+msgstr ""
+"Если установить, то пункт меню будет показан только для авторизированных "
+"пользователей"
 
 #: models.py:80
 msgid "Anonymous only"
@@ -73,12 +75,18 @@ msgstr "Для анонимных"
 
 #: models.py:82
 msgid "Should this item only be shown to non-logged-in users?"
-msgstr "Если установить, то пункт меню будет показан только для не авторизированных пользователей"
+msgstr ""
+"Если установить, то пункт меню будет показан только для не авторизированных "
+"пользователей"
 
-#: models.py:86
+#: models.py:85
+msgid "Submenu"
+msgstr "Подменю"
+
+#: models.py:88
 msgid "menu item"
 msgstr "пункт меню"
 
-#: models.py:87
+#: models.py:89
 msgid "menu items"
 msgstr "пункты меню"

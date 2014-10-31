@@ -82,6 +82,8 @@ class MenuItem(models.Model):
         help_text=_(u'Should this item only be shown to non-logged-in users?')
         )
 
+    submenu = models.ForeignKey(Menu, related_name='submenu', verbose_name=_(u'Submenu'), null=True, blank=True,  )
+
     class Meta:
         verbose_name = _(u'menu item')
         verbose_name_plural = _(u'menu items')

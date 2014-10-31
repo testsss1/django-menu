@@ -3,6 +3,7 @@ from menu.models import Menu, MenuItem
 
 class MenuItemInline(admin.TabularInline):
     model = MenuItem
+    fk_name = 'menu'
 
 class MenuAdmin(admin.ModelAdmin):
     inlines = [MenuItemInline,]

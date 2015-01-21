@@ -24,7 +24,11 @@ class Menu(models.Model):
         blank=True,
         null=True
         )
-
+    enabled = models.BooleanField(
+        _(u'Enabled'),
+        default=True,
+        help_text=_(u'Disable or enable menu')
+        )
     class Meta:
         verbose_name = _(u'menu')
         verbose_name_plural = _(u'menus')
@@ -81,7 +85,11 @@ class MenuItem(models.Model):
         blank=True,
         help_text=_(u'Should this item only be shown to non-logged-in users?')
         )
-
+    enabled = models.BooleanField(
+        _(u'Enabled'),
+        default=True,
+        help_text=_(u'Disable or enable menu')
+        )
     submenu = models.ForeignKey(Menu, related_name='submenu', verbose_name=_(u'Submenu'), null=True, blank=True,  )
 
     class Meta:

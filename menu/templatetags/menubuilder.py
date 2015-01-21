@@ -67,11 +67,11 @@ def get_items(menu_name, current_path, user):
         menuitems = []
         
     try:
-        menu = Menu.objects.get(slug=menu_name)
+        menu = Menu.objects.get(slug=menu_name, enabled=True)
     except Menu.DoesNotExist:
         return []
 
-    for i in MenuItem.objects.filter(menu=menu).order_by('order'):
+    for i in MenuItem.objects.filter(menu=menu, enabled=True).order_by('order'):
         menuitem = load_menu(current_path, i, menu, user)
         if menuitem:
             menuitems.append(menuitem)

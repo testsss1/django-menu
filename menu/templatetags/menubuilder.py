@@ -31,7 +31,7 @@ def load_menu(current_path, i, menu, user):
     if menu.base_url and i.link_url == menu.base_url and current_path != i.link_url:
         current = False
     show_anonymous = i.anonymous_only and user.is_anonymous()
-    show_auth = i.login_required and user.is_authenticated() and user.is_staff()
+    show_auth = i.login_required and user.is_authenticated() and user.is_staff
     if (not (i.login_required or i.anonymous_only)) or (i.login_required and show_auth) or (i.anonymous_only and show_anonymous):
         menuitem = {'url': i.link_url, 'title': i.title, 'current': current, 'image': i.image, 'submenu': []}
         if i.submenu:

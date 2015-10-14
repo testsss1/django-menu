@@ -59,7 +59,7 @@ def get_items(menu_name, current_path, user):
     debug = getattr(settings, 'DEBUG', False)
 
     if cache_time >= 0 and not debug:
-        cache_key = 'django-menu-items/%s/%s/%s'  % (menu_name, current_path, user.is_authenticated())
+        cache_key = 'django-menu-items/%s/%s/%s' % (menu_name, current_path, user.is_authenticated())
         menuitems = cache.get(cache_key, [])
         if menuitems:
             return menuitems

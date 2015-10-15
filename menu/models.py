@@ -86,6 +86,7 @@ class MenuItem(models.Model):
         help_text=_(u'Should this item only be shown to non-logged-in users?')
         )
     image = models.ImageField(upload_to='menu', verbose_name=_(u'Picture'), null=True, blank=True)
+    svg = models.CharField(verbose_name=_(u'SVG Icon'), null=True, blank=True, max_length=120)
     enabled = models.BooleanField(
         _(u'Enabled'),
         default=True,

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from django.core.cache import cache
@@ -27,7 +28,7 @@ class Menu(models.Model):
     enabled = models.BooleanField(
         _(u'Enabled'),
         default=True,
-        help_text=_(u'Disable or enable menu')
+        help_text=_(u'Отключить или включить меню')
         )
     class Meta:
         verbose_name = _(u'menu')
@@ -91,17 +92,17 @@ class MenuItem(models.Model):
         blank=True,
         help_text=_(u'Should this item only be shown to non-logged-in users?')
         )
-    image = models.ImageField(upload_to='menu', verbose_name=_(u'Picture'), null=True, blank=True)
-    extra = models.CharField(verbose_name=_(u'Extra parameters'), null=True, blank=True, max_length=120)
+    image = models.ImageField(upload_to='menu', verbose_name=_(u'Изображение'), null=True, blank=True)
+    extra = models.CharField(verbose_name=_(u'Дополнительные параметры'), null=True, blank=True, max_length=120)
     enabled = models.BooleanField(
         _(u'Enabled'),
         default=True,
-        help_text=_(u'Disable or enable menu')
+        help_text=_(u'Отключить или включить меню')
         )
     target = models.BooleanField(
-        _(u'New window'),
+        _(u'Новое окно'),
         default=False,
-        help_text=_(u'Open link in new window')
+        help_text=_(u'Открыть ссылку в новом окне')
         )
 
     submenu = models.ForeignKey(Menu, related_name='submenu', verbose_name=_(u'Submenu'), null=True, blank=True)
